@@ -1,0 +1,33 @@
+{
+  "Metadata": {
+    "title": "WD Group",
+    "description": "Official website of WD Group"
+  },
+  "Nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "eyebrow": "Welcome",
+    "title": "We build outstanding digital experiences",
+    "subtitle": "End-to-end solutions to grow your business in the digital world",
+    "ctaPrimary": "Start your project",
+    "ctaSecondary": "Learn more"
+  },
+  "LocaleSwitcher": {
+    "switchTo": "العربية"
+  },
+  "Contact": {
+    "title": "Contact us",
+    "subtitle": "We're happy to answer your questions",
+    "name": "Name",
+    "email": "Email",
+    "message": "Your message",
+    "submit": "Send",
+    "sending": "Sending...",
+    "success": "Your message has been received. We'll get back to you soon.",
+    "error": "Something went wrong. Please try again."
+  }
+}

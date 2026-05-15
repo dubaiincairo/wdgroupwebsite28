@@ -1,0 +1,33 @@
+{
+  "Metadata": {
+    "title": "WD Group",
+    "description": "موقع شركة WD Group الرسمي"
+  },
+  "Nav": {
+    "home": "الرئيسية",
+    "about": "من نحن",
+    "services": "خدماتنا",
+    "contact": "تواصل معنا"
+  },
+  "Hero": {
+    "eyebrow": "مرحباً بك",
+    "title": "نبني تجارب رقمية مميزة",
+    "subtitle": "حلول متكاملة لتطوير أعمالك في العالم الرقمي",
+    "ctaPrimary": "ابدأ مشروعك",
+    "ctaSecondary": "تعرف علينا"
+  },
+  "LocaleSwitcher": {
+    "switchTo": "English"
+  },
+  "Contact": {
+    "title": "تواصل معنا",
+    "subtitle": "نسعد بالرد على استفساراتك",
+    "name": "الاسم",
+    "email": "البريد الإلكتروني",
+    "message": "رسالتك",
+    "submit": "إرسال",
+    "sending": "جارٍ الإرسال...",
+    "success": "تم استلام رسالتك. سنتواصل معك قريباً.",
+    "error": "حدث خطأ. يرجى المحاولة مرة أخرى."
+  }
+}
