@@ -1,5 +1,6 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
 import { ContactForm } from "@/components/contact-form";
 
 export default async function ContactPage({
@@ -23,6 +24,7 @@ export default async function ContactPage({
           </div>
         </section>
       </main>
+      <SiteFooter />
     </>
   );
 }

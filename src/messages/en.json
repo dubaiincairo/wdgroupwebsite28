@@ -1,23 +1,91 @@
 {
   "Metadata": {
-    "title": "WD Group",
-    "description": "Official website of WD Group"
+    "title": "WD Group — Value, Vision, Future",
+    "description": "A Saudi multi-sector group spanning hospitality, manufacturing, and contracting."
   },
   "Nav": {
-    "home": "Home",
     "about": "About",
-    "services": "Services",
+    "hospitality": "Hospitality",
+    "manufacturing": "Manufacturing",
+    "contracting": "Contracting",
+    "careers": "Careers",
     "contact": "Contact"
   },
+  "LocaleSwitcher": { "switchTo": "عربي" },
   "Hero": {
-    "eyebrow": "Welcome",
-    "title": "We build outstanding digital experiences",
-    "subtitle": "End-to-end solutions to grow your business in the digital world",
-    "ctaPrimary": "Start your project",
-    "ctaSecondary": "Learn more"
+    "title1": "Solid Vision,",
+    "title2": "Diverse Sectors,",
+    "title3": "Promising Future.",
+    "ctaPrimary": "Explore Our Products",
+    "ctaSecondary": "Discover Our Hospitality Experience"
   },
-  "LocaleSwitcher": {
-    "switchTo": "العربية"
+  "Stats": {
+    "item1Number": "6",
+    "item1Label": "Hospitality Properties in KSA",
+    "item2Number": "3",
+    "item2Label": "Specialized Factories with High Production Capacity",
+    "item3Number": "80+",
+    "item3Label": "Specialized Employees Across All Sectors"
+  },
+  "Sectors": {
+    "tag": "Our Strategic Sectors",
+    "title": "Three Sectors Shaping Our Future",
+    "subtitle": "We diversify across complementary sectors that reinforce one another, expanding our footprint across Saudi cities.",
+    "hospitality": {
+      "name": "Hospitality",
+      "badge": "6 Properties",
+      "subtitle": "SwissBlue Hospitality Group",
+      "description": "Six hotels and serviced-apartment properties across Jeddah, Riyadh, and Jazan — operating under three brands (SwissBlue, Vinas, Tulip) to international standards.",
+      "link": "Visit Hospitality Website"
+    },
+    "manufacturing": {
+      "name": "Manufacturing & Furniture",
+      "badge": "3 Factories",
+      "subtitle": "GreenWood Furniture",
+      "description": "Three specialized factories in wood, aluminum, and interior decor — under the GreenWood brand across Saudi Arabia.",
+      "link": "Visit GreenWood Website"
+    },
+    "contracting": {
+      "name": "Contracting",
+      "badge": "Completed Projects",
+      "subtitle": "Engineering Excellence",
+      "description": "Delivering integrated commercial and residential projects with a qualified engineering team and professional project management.",
+      "link": "Browse Our Projects"
+    }
+  },
+  "Identity": {
+    "tag": "Our Identity",
+    "title": "Vision, Mission & Values",
+    "visionLabel": "Vision",
+    "vision": "To be a leading Saudi group contributing to a diversified, sustainable national economy — establishing regional and international presence through quality, innovation, and excellence.",
+    "missionLabel": "Mission",
+    "mission": "Delivering high-quality products and services in hospitality, manufacturing, and contracting — with qualified Saudi talent and advanced technology that meets the aspirations of our clients and partners.",
+    "valuesLabel": "Values",
+    "values": "Quality and excellence — continuous innovation — integrity and transparency — responsibility toward nation, community, and environment — and the relentless pursuit of improvement every single day."
+  },
+  "CEOQuote": {
+    "quote": "We believe true success is measured by the impact we make on those around us — our employees, clients, and community. We started with a simple dream: to build a Saudi institution future generations will be proud of.",
+    "name": "Eng. Mohammed Al-Shaibani",
+    "title": "Chief Executive Officer — WD Group"
+  },
+  "FinalCTA": {
+    "title": "Interested in Partnering With Us?",
+    "subtitle": "Whether you're exploring a partnership or have a business proposal, we'd love to start the conversation.",
+    "button": "Contact Our Team"
+  },
+  "Footer": {
+    "tagline": "Value · Vision · Future",
+    "description": "A multi-sector conglomerate in hospitality, manufacturing, and contracting — contributing to a diversified, sustainable national economy in line with Vision 2030.",
+    "companyCol": "Company",
+    "sectorsCol": "Sectors",
+    "connectCol": "Connect",
+    "about": "About Us",
+    "careers": "Careers",
+    "contact": "Contact",
+    "hospitality": "Hospitality",
+    "manufacturing": "Manufacturing",
+    "contracting": "Contracting",
+    "copyright": "© 2025 WD Group for Business. All rights reserved."
   },
   "Contact": {
     "title": "Contact us",
