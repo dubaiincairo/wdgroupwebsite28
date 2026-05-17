@@ -1,15 +1,130 @@
 @import "tailwindcss";
 
+/* ============================================================
+   Saudi Government Design System ("Platforms Code") — Fonts
+   Source: govsa-ds package, copied to /public/fonts/
+   ============================================================ */
+
+@font-face {
+  font-family: "TheSans";
+  src: url("/fonts/thesansplain-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TheSans";
+  src: url("/fonts/thesans-b4semilight-webfont.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TheSans";
+  src: url("/fonts/thesans-b5plainitalic-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TheSans";
+  src: url("/fonts/thesans-b8extrabold-webfont.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NotoNaskhArabic";
+  src: url("/fonts/notonaskharabic-regular-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NotoNaskhArabic";
+  src: url("/fonts/notonaskharabic-bold-webfont.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
+/* ============================================================
+   Saudi Government Design System — Tokens
+   Mapped to Tailwind v4 @theme so every utility class is available:
+     bg-primary, text-secondary, border-tiffany, rounded-pill, etc.
+   ============================================================ */
+
 @theme inline {
+  /* App background / foreground */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Primary — Green */
+  --color-primary: #26634b;
+  --color-primary-shade: #066058;
+  --color-primary-tint: #27aa8c;
+  --color-primary-pastel: #acddc7;
+  --color-primary-dark: #144d3f;
+
+  /* Secondary — Blue */
+  --color-secondary: #005a96;
+  --color-secondary-shade: #0053ba;
+  --color-secondary-tint: #0054ae;
+  --color-secondary-pastel: #339eec;
+
+  /* Dark Blue — accent */
+  --color-dark-blue: #160f3e;
+  --color-dark-blue-shade: #1f255b;
+  --color-dark-blue-tint: #444061;
+  --color-dark-blue-pastel: #cdccd5;
+
+  /* Tiffany */
+  --color-tiffany: #0aebd7;
+  --color-tiffany-shade: #046459;
+  --color-tiffany-tint: #4ecebb;
+  --color-tiffany-pastel: #a9e2d7;
+
+  /* Violet */
+  --color-violet: #5505cd;
+  --color-violet-shade: #3c2b7d;
+  --color-violet-tint: #5830b4;
+  --color-violet-pastel: #ac9fd5;
+
+  /* Grayscale */
+  --color-gray: #323232;
+  --color-gray-shade: #242424;
+  --color-gray-tint: #595959;
+  --color-gray-pastel: #eaeaea;
+
+  /* Semantic */
+  --color-success: #006604;
+  --color-info: #339eec;
+  --color-warning: #ffc107;
+  --color-danger: #af0818;
+  --color-orange: #fd7e14;
+
+  /* Fonts — Saudi official + Geist for app chrome */
+  --font-sans: "TheSans", "NotoNaskhArabic", var(--font-geist-sans), system-ui, sans-serif;
+  --font-arabic: "NotoNaskhArabic", "TheSans", system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Headings — extra sizes beyond Tailwind defaults */
+  --text-h1: 2.5rem;
+  --text-h2: 2rem;
+  --text-h3: 1.75rem;
+  --text-h4: 1.5rem;
+  --text-h5: 1.25rem;
+  --text-h6: 1rem;
+
+  /* Radii — Saudi DS uses pill-shaped buttons */
+  --radius-card: 0.5rem;
+  --radius-pill: 3rem;
+  --radius-pill-lg: 3.6rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +137,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
