@@ -206,6 +206,21 @@
   --gradient-brand-900-600-45: linear-gradient(45deg, #104631 0%, #1B8354 100%);
 }
 
+/* Responsive container — encapsulates the Figma layout grid:
+   1280px max, 16px/32px/80px outer padding at mobile/tablet/desktop. */
+@utility container-app {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 80rem; /* 1280px */
+  padding-inline: 1rem; /* 16px mobile */
+  @media (min-width: 768px) {
+    padding-inline: 2rem; /* 32px tablet */
+  }
+  @media (min-width: 1024px) {
+    padding-inline: 5rem; /* 80px desktop */
+  }
+}
+
 /* Gradient utilities — Tailwind v4 doesn't auto-generate bg-image utilities
    from `--gradient-*` tokens, so expose them as named classes. */
 @utility bg-gradient-brand-600-500 {
