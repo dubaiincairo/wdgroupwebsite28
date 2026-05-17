@@ -213,11 +213,15 @@
   background-image: var(--gradient-brand-900-600-45);
 }
 
-/* ---------- Responsive type scale (mobile / tablet) ----------
-   Below the `md` breakpoint, the same `text-display-*` / `text-*` utilities
-   automatically shrink to the mobile sizes specified in the Figma
-   foundations, so consumers don't need separate mobile classes. */
-@media (max-width: 767px) {
+/* ---------- Responsive type scale ----------
+   Three tiers from the Figma foundations, all driving the same
+   text-display-* / text-* utilities so consumers write one class:
+
+     ≥1024px  Desktop  (default — declared in @theme above)
+     768-1023 Tablet   (every tier shrinks one step)
+     <768px   Mobile   (smallest scale)
+*/
+@media (max-width: 1023px) {
   :root {
     --text-display-2xl: 3.5rem;                /* 56px */
     --text-display-2xl--line-height: 4.5rem;   /* 72px */
@@ -244,6 +248,36 @@
     --text-xs--line-height: 0.875rem;          /* 14px */
     --text-2xs: 0.5rem;                        /* 8px */
     --text-2xs--line-height: 0.75rem;          /* 12px */
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --text-display-2xl: 3rem;                  /* 48px */
+    --text-display-2xl--line-height: 4rem;     /* 64px */
+    --text-display-xl: 2.5rem;                 /* 40px */
+    --text-display-xl--line-height: 3.5rem;    /* 56px */
+    --text-display-lg: 2rem;                   /* 32px */
+    --text-display-lg--line-height: 2.5rem;    /* 40px */
+    --text-display-md: 1.5rem;                 /* 24px */
+    --text-display-md--line-height: 2rem;      /* 32px */
+    --text-display-sm: 1.25rem;                /* 20px */
+    --text-display-sm--line-height: 1.75rem;   /* 28px */
+    --text-display-xs: 1.125rem;               /* 18px */
+    --text-display-xs--line-height: 1.5rem;    /* 24px */
+
+    --text-xl: 1rem;                           /* 16px */
+    --text-xl--line-height: 1.5rem;            /* 24px */
+    --text-lg: 0.875rem;                       /* 14px */
+    --text-lg--line-height: 1.25rem;           /* 20px */
+    --text-md: 0.75rem;                        /* 12px */
+    --text-md--line-height: 1.125rem;          /* 18px */
+    --text-sm: 0.625rem;                       /* 10px */
+    --text-sm--line-height: 0.875rem;          /* 14px */
+    --text-xs: 0.5rem;                         /* 8px */
+    --text-xs--line-height: 0.75rem;           /* 12px */
+    --text-2xs: 0.5rem;                        /* 8px */
+    --text-2xs--line-height: 0.625rem;         /* 10px */
   }
 }
 
