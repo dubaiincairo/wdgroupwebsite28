@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "WD Group Website",
-  description: "WD Group website powered by Vercel and Sanity.",
+  title: "مجموعة دبليو دي للأعمال | WD Group",
+  description:
+    "مجموعة سعودية متنوعة الأنشطة تمتد عبر قطاعات الضيافة والتصنيع والمقاولات.",
 };
 
 export default function RootLayout({
@@ -24,7 +25,8 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="ar"
+      dir="rtl"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
