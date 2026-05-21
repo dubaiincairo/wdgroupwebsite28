@@ -35,6 +35,7 @@ function swissblue_load_includes() {
 		'enqueue',
 		'post-types',
 		'taxonomies',
+		'i18n',
 		'acf-setup',
 		'block-bindings',
 		'blocks',
