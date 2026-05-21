@@ -37,6 +37,7 @@ function swissblue_load_includes() {
 		'taxonomies',
 		'acf-setup',
 		'block-bindings',
+		'blocks',
 		'booking-bridge',
 		'schema',
 	);

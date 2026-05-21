@@ -1,0 +1,83 @@
+/**
+ * swissblue/property-hero — DESIGN_SYSTEM §8.1 (Primary Button), §12.2.
+ * Tokens only; logical properties throughout for RTL safety.
+ */
+.swissblue-property-hero {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 420px;
+	padding-block: var(--wp--preset--spacing--xxl);
+	padding-inline: var(--wp--preset--spacing--xl);
+	overflow: hidden;
+	border-radius: var(--radius-lg);
+	background-color: var(--wp--preset--color--background-dark);
+}
+
+.swissblue-property-hero__media {
+	position: absolute;
+	inset: 0;
+	background-position: center;
+	background-size: cover;
+}
+
+.swissblue-property-hero__overlay {
+	position: absolute;
+	inset: 0;
+	background-color: var(--wp--preset--color--background-dark);
+	opacity: 0.55;
+}
+
+.swissblue-property-hero__content {
+	position: relative;
+	z-index: 1;
+	max-width: 640px;
+	text-align: center;
+	color: var(--wp--preset--color--text-on-dark);
+}
+
+.swissblue-property-hero__heading {
+	margin: 0;
+	font-size: var(--wp--preset--font-size--3xl);
+	font-weight: var(--fw-bold);
+	line-height: 1.15;
+}
+
+.swissblue-property-hero__subheading {
+	margin-block: var(--wp--preset--spacing--sm) 0;
+	font-size: var(--wp--preset--font-size--md);
+	/* Secondary text on a dark surface — DESIGN_SYSTEM §3.4. */
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.swissblue-property-hero__cta {
+	display: inline-block;
+	margin-block-start: var(--wp--preset--spacing--lg);
+	padding-block: var(--wp--preset--spacing--sm);
+	padding-inline: var(--wp--preset--spacing--xl);
+	border-radius: var(--radius-full);
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--text-on-primary);
+	font-size: var(--wp--preset--font-size--base);
+	font-weight: var(--fw-semibold);
+	text-decoration: none;
+	transition: background-color var(--duration-fast, 150ms) ease,
+		box-shadow var(--duration-fast, 150ms) ease;
+}
+
+.swissblue-property-hero__cta:hover {
+	background-color: var(--wp--preset--color--primary-hover);
+	box-shadow: var(--wp--preset--shadow--button-hover);
+}
+
+.swissblue-property-hero__cta:focus-visible {
+	outline: none;
+	box-shadow: var(--wp--preset--shadow--focus-ring);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.swissblue-property-hero__cta {
+		transition: none;
+	}
+}

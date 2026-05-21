@@ -8,5 +8,17 @@
  * @since 0.1.0
  */
 document.addEventListener('DOMContentLoaded', () => {
-  // TODO Phase 3+: wire up interactive block behaviour.
+  // Booking sticky bar (DESIGN_SYSTEM §8.8) — toggle the price breakdown panel.
+  document.querySelectorAll('.swissblue-sticky-bar__toggle').forEach((toggle) => {
+    toggle.addEventListener('click', () => {
+      const bar = toggle.closest('.swissblue-sticky-bar');
+      const panel = bar && bar.querySelector('.swissblue-sticky-bar__panel');
+      if (!panel) {
+        return;
+      }
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      panel.hidden = expanded;
+    });
+  });
 });

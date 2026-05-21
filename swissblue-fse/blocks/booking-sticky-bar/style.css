@@ -1,0 +1,131 @@
+/**
+ * swissblue/booking-sticky-bar — DESIGN_SYSTEM §8.8 (Sticky Bottom Price Bar).
+ * Tokens only; logical properties throughout for RTL safety.
+ */
+.swissblue-sticky-bar {
+	position: fixed;
+	inset-block-end: 0;
+	inset-inline: 0;
+	z-index: 50;
+	background-color: var(--wp--preset--color--background-dark);
+	color: var(--wp--preset--color--text-on-dark);
+	border-start-start-radius: var(--radius-xl);
+	border-start-end-radius: var(--radius-xl);
+	box-shadow: var(--wp--preset--shadow--elevated);
+}
+
+.swissblue-sticky-bar__inner {
+	display: flex;
+	align-items: center;
+	gap: var(--wp--preset--spacing--md);
+	max-width: var(--container-wide, 1330px);
+	margin-inline: auto;
+	padding-block: var(--wp--preset--spacing--md);
+	padding-inline: var(--wp--preset--spacing--xl);
+}
+
+.swissblue-sticky-bar__toggle {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	padding: 0;
+	border: 0;
+	border-radius: var(--radius-full);
+	background: transparent;
+	color: inherit;
+	cursor: pointer;
+}
+
+.swissblue-sticky-bar__toggle:focus-visible {
+	outline: none;
+	box-shadow: var(--wp--preset--shadow--focus-ring);
+}
+
+.swissblue-sticky-bar__chevron {
+	transition: transform var(--duration-default, 200ms) ease;
+}
+
+.swissblue-sticky-bar__toggle[aria-expanded="true"] .swissblue-sticky-bar__chevron {
+	transform: rotate(180deg);
+}
+
+.swissblue-sticky-bar__total {
+	display: flex;
+	flex-direction: column;
+	margin-inline-end: auto;
+}
+
+.swissblue-sticky-bar__label {
+	font-size: var(--wp--preset--font-size--sm);
+	/* Secondary text on a dark surface — DESIGN_SYSTEM §3.4. */
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.swissblue-sticky-bar__price {
+	font-size: var(--wp--preset--font-size--xl);
+	font-weight: var(--fw-bold);
+	font-variant-numeric: tabular-nums;
+}
+
+.swissblue-sticky-bar__currency {
+	margin-inline-start: var(--wp--preset--spacing--xxs);
+	font-size: var(--wp--preset--font-size--base);
+	font-weight: var(--fw-medium);
+}
+
+.swissblue-sticky-bar__cta {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--wp--preset--spacing--xs);
+	padding-block: var(--wp--preset--spacing--sm);
+	padding-inline: var(--wp--preset--spacing--xl);
+	border-radius: var(--radius-full);
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--text-on-primary);
+	font-size: var(--wp--preset--font-size--base);
+	font-weight: var(--fw-semibold);
+	white-space: nowrap;
+	text-decoration: none;
+	transition: background-color var(--duration-fast, 150ms) ease;
+}
+
+.swissblue-sticky-bar__cta:hover {
+	background-color: var(--wp--preset--color--primary-hover);
+}
+
+.swissblue-sticky-bar__cta:focus-visible {
+	outline: none;
+	box-shadow: var(--wp--preset--shadow--focus-ring);
+}
+
+/* Continue arrow mirrors in RTL — DESIGN_SYSTEM §11.3. */
+[dir="rtl"] .swissblue-sticky-bar__arrow {
+	transform: scaleX(-1);
+}
+
+.swissblue-sticky-bar__panel {
+	max-width: var(--container-wide, 1330px);
+	margin-inline: auto;
+	padding-block: 0 var(--wp--preset--spacing--md);
+	padding-inline: var(--wp--preset--spacing--xl);
+}
+
+.swissblue-sticky-bar__panel[hidden] {
+	display: none;
+}
+
+.swissblue-sticky-bar__panel-note {
+	margin: 0;
+	font-size: var(--wp--preset--font-size--sm);
+	/* Secondary text on a dark surface — DESIGN_SYSTEM §3.4. */
+	color: rgba(255, 255, 255, 0.7);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.swissblue-sticky-bar__chevron,
+	.swissblue-sticky-bar__cta {
+		transition: none;
+	}
+}

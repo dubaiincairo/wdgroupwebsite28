@@ -6,10 +6,30 @@
 	"title": "Room Card",
 	"category": "swissblue",
 	"icon": "admin-home",
-	"description": "Room type card with image, inclusions and price sidebar — the signature component. Implements DESIGN_SYSTEM §8.2 (Room Card). Scaffold only — built in Phase 3.",
+	"description": "Room type card with image, inclusions and price sidebar — the signature component. Implements DESIGN_SYSTEM §8.2 (Room Card).",
 	"keywords": ["swissblue", "room", "card"],
 	"textdomain": "swissblue-fse",
+	"attributes": {
+		"roomName": { "type": "string", "default": "" },
+		"planName": { "type": "string", "default": "" },
+		"imageUrl": { "type": "string", "default": "" },
+		"imageId": { "type": "number", "default": 0 },
+		"inclusions": { "type": "string", "default": "" },
+		"badgeText": { "type": "string", "default": "" },
+		"discountText": { "type": "string", "default": "" },
+		"originalPrice": { "type": "string", "default": "" },
+		"price": { "type": "string", "default": "" },
+		"currency": { "type": "string", "default": "SAR" },
+		"priceCaption": { "type": "string", "default": "" },
+		"taxesText": { "type": "string", "default": "" },
+		"selectText": { "type": "string", "default": "Select Room" },
+		"selectUrl": { "type": "string", "default": "" }
+	},
 	"supports": {
-		"html": false
-	}
+		"html": false,
+		"anchor": true
+	},
+	"editorScript": "swissblue-room-card-editor",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
 }

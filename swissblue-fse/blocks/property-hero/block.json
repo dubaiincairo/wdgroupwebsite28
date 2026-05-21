@@ -6,10 +6,23 @@
 	"title": "Property Hero",
 	"category": "swissblue",
 	"icon": "cover-image",
-	"description": "Full-width property hero with overlaid content and a primary CTA. Implements DESIGN_SYSTEM §8.1 (Primary Button) and optionally §8.6 (AI Banner). Scaffold only — built in Phase 3.",
+	"description": "Full-width property hero with overlaid content and a primary CTA. Implements DESIGN_SYSTEM §8.1 (Primary Button) and §12.2 (property hero).",
 	"keywords": ["swissblue", "property", "hero"],
 	"textdomain": "swissblue-fse",
+	"attributes": {
+		"heading": { "type": "string", "default": "" },
+		"subheading": { "type": "string", "default": "" },
+		"imageUrl": { "type": "string", "default": "" },
+		"imageId": { "type": "number", "default": 0 },
+		"ctaText": { "type": "string", "default": "" },
+		"ctaUrl": { "type": "string", "default": "" }
+	},
 	"supports": {
-		"html": false
-	}
+		"html": false,
+		"anchor": true,
+		"align": ["wide", "full"]
+	},
+	"editorScript": "swissblue-property-hero-editor",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
 }

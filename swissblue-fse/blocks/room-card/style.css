@@ -1,0 +1,181 @@
+/**
+ * swissblue/room-card — DESIGN_SYSTEM §8.2 (Room Card).
+ * Tokens only; logical properties throughout. The horizontal image/content/
+ * price split mirrors automatically in RTL via flex direction (§11.3).
+ */
+.swissblue-room-card {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+	background-color: var(--wp--preset--color--background-card);
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: var(--radius-lg);
+	box-shadow: var(--wp--preset--shadow--card);
+}
+
+.swissblue-room-card__media {
+	flex: 1 1 35%;
+	min-width: 240px;
+}
+
+.swissblue-room-card__media img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	aspect-ratio: 4 / 3;
+}
+
+.swissblue-room-card__content {
+	flex: 1 1 40%;
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--sm);
+	padding: var(--wp--preset--spacing--lg);
+}
+
+.swissblue-room-card__name {
+	margin: 0;
+	font-size: var(--wp--preset--font-size--xl);
+	font-weight: var(--fw-semibold);
+	color: var(--wp--preset--color--text-primary);
+}
+
+.swissblue-room-card__plan {
+	margin: 0;
+	font-size: var(--wp--preset--font-size--base);
+	font-weight: var(--fw-semibold);
+	color: var(--wp--preset--color--text-primary);
+}
+
+.swissblue-room-card__inclusions {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--xs);
+}
+
+.swissblue-room-card__inclusion {
+	display: flex;
+	align-items: center;
+	gap: var(--wp--preset--spacing--xs);
+	font-size: var(--wp--preset--font-size--base);
+	color: var(--wp--preset--color--text-secondary);
+}
+
+.swissblue-room-card__check {
+	flex-shrink: 0;
+	color: var(--wp--preset--color--success);
+}
+
+.swissblue-room-card__price {
+	flex: 1 1 25%;
+	min-width: 220px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: var(--wp--preset--spacing--xs);
+	padding: var(--wp--preset--spacing--lg);
+	background-color: var(--wp--preset--color--background-subtle);
+	border-inline-start: 1px solid var(--wp--preset--color--border);
+}
+
+.swissblue-room-card__tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--wp--preset--spacing--xs);
+}
+
+.swissblue-room-card__badge,
+.swissblue-room-card__discount {
+	display: inline-flex;
+	align-items: center;
+	padding-block: var(--wp--preset--spacing--xxs);
+	padding-inline: var(--wp--preset--spacing--sm);
+	border-radius: var(--radius-full);
+	background-color: var(--wp--preset--color--success-light);
+	color: var(--wp--preset--color--success);
+	font-size: var(--wp--preset--font-size--xs);
+	font-weight: var(--fw-semibold);
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+.swissblue-room-card__pricing {
+	display: flex;
+	align-items: baseline;
+	gap: var(--wp--preset--spacing--xxs);
+	margin-block-start: var(--wp--preset--spacing--xs);
+}
+
+.swissblue-room-card__original {
+	font-size: var(--wp--preset--font-size--sm);
+	color: var(--wp--preset--color--text-tertiary);
+	text-decoration: line-through;
+}
+
+.swissblue-room-card__amount {
+	font-size: var(--wp--preset--font-size--xl);
+	font-weight: var(--fw-semibold);
+	color: var(--wp--preset--color--text-primary);
+	font-variant-numeric: tabular-nums;
+}
+
+.swissblue-room-card__currency {
+	margin-inline-start: var(--wp--preset--spacing--xxs);
+	font-size: var(--wp--preset--font-size--base);
+	font-weight: var(--fw-medium);
+}
+
+.swissblue-room-card__caption,
+.swissblue-room-card__taxes {
+	margin: 0;
+	font-size: var(--wp--preset--font-size--sm);
+	color: var(--wp--preset--color--text-secondary);
+}
+
+.swissblue-room-card__select {
+	box-sizing: border-box;
+	width: 100%;
+	margin-block-start: var(--wp--preset--spacing--xs);
+	padding-block: var(--wp--preset--spacing--sm);
+	padding-inline: var(--wp--preset--spacing--xl);
+	border-radius: var(--radius-md);
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--text-on-primary);
+	font-size: var(--wp--preset--font-size--base);
+	font-weight: var(--fw-semibold);
+	text-align: center;
+	text-decoration: none;
+	transition: background-color var(--duration-fast, 150ms) ease,
+		box-shadow var(--duration-fast, 150ms) ease;
+}
+
+.swissblue-room-card__select:hover {
+	background-color: var(--wp--preset--color--primary-hover);
+	box-shadow: var(--wp--preset--shadow--button-hover);
+}
+
+.swissblue-room-card__select:focus-visible {
+	outline: none;
+	box-shadow: var(--wp--preset--shadow--focus-ring);
+}
+
+@media (max-width: 781px) {
+	.swissblue-room-card__media img {
+		aspect-ratio: 16 / 9;
+	}
+
+	.swissblue-room-card__price {
+		border-inline-start: 0;
+		border-block-start: 1px solid var(--wp--preset--color--border);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.swissblue-room-card__select {
+		transition: none;
+	}
+}

@@ -6,10 +6,22 @@
 	"title": "Booking Sticky Bar",
 	"category": "swissblue",
 	"icon": "money-alt",
-	"description": "Fixed bottom price bar with grand total and Continue CTA. Implements DESIGN_SYSTEM §8.8 (Sticky Bottom Price Bar); the source orange CTA is adapted to the SwissBlue primary. Scaffold only — built in Phase 3.",
+	"description": "Fixed bottom price bar with grand total and a Continue CTA. Implements DESIGN_SYSTEM §8.8 (Sticky Bottom Price Bar); the source orange CTA is adapted to the SwissBlue primary.",
 	"keywords": ["swissblue", "booking", "sticky"],
 	"textdomain": "swissblue-fse",
+	"attributes": {
+		"totalLabel": { "type": "string", "default": "Grand Total" },
+		"price": { "type": "string", "default": "" },
+		"currency": { "type": "string", "default": "SAR" },
+		"ctaText": { "type": "string", "default": "Continue" },
+		"ctaUrl": { "type": "string", "default": "" }
+	},
 	"supports": {
-		"html": false
-	}
+		"html": false,
+		"multiple": false,
+		"reusable": false
+	},
+	"editorScript": "swissblue-booking-sticky-bar-editor",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
 }
