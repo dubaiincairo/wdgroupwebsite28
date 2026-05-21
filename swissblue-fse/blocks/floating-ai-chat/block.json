@@ -1,0 +1,16 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "swissblue/floating-ai-chat",
+	"version": "0.1.0",
+	"title": "Floating AI Chat",
+	"category": "swissblue",
+	"icon": "format-chat",
+	"description": "Persistent floating AI concierge chat bubble. Implements DESIGN_SYSTEM §8.9 (Floating Action Buttons — AI Chat). Scaffold only — built in Phase 3, and only if SwissBlue adopts AI features.",
+	"keywords": ["swissblue", "ai", "chat", "concierge"],
+	"textdomain": "swissblue-fse",
+	"supports": {
+		"html": false,
+		"inserter": false
+	}
+}

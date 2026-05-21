@@ -1,0 +1,16 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "swissblue/floating-rate-check",
+	"version": "0.1.0",
+	"title": "Floating Rate Check",
+	"category": "swissblue",
+	"icon": "yes-alt",
+	"description": "Persistent floating Rate Check button. Implements DESIGN_SYSTEM §8.9 (Floating Action Buttons — Rate Check). Scaffold only — built in Phase 3, and only if this competitor-comparison feature is approved for the SwissBlue brand.",
+	"keywords": ["swissblue", "rate", "floating"],
+	"textdomain": "swissblue-fse",
+	"supports": {
+		"html": false,
+		"inserter": false
+	}
+}

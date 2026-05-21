@@ -1,0 +1,26 @@
+{
+  "name": "swissblue-fse",
+  "version": "0.1.0",
+  "description": "Custom WordPress 7.0 FSE block theme for SwissBlue Hotels Group, implementing the BNY-CSDS design system.",
+  "private": true,
+  "type": "module",
+  "license": "GPL-2.0-or-later",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build",
+    "build:blocks": "wp-scripts build",
+    "format": "wp-scripts format",
+    "lint": "wp-scripts lint-js && wp-scripts lint-style"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@wordpress/scripts": "^30",
+    "autoprefixer": "^10",
+    "postcss": "^8",
+    "tailwindcss": "^4",
+    "vite": "^6"
+  }
+}

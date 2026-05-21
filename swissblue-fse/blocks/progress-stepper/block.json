@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "swissblue/progress-stepper",
+	"version": "0.1.0",
+	"title": "Progress Stepper",
+	"category": "swissblue",
+	"icon": "editor-ol",
+	"description": "Horizontal booking-flow stepper with pending, active and completed states. Implements DESIGN_SYSTEM §8.7 (Progress Stepper). Scaffold only — built in Phase 3.",
+	"keywords": ["swissblue", "stepper", "progress"],
+	"textdomain": "swissblue-fse",
+	"supports": {
+		"html": false
+	}
+}

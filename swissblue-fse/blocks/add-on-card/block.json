@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "swissblue/add-on-card",
+	"version": "0.1.0",
+	"title": "Add-On Card",
+	"category": "swissblue",
+	"icon": "plus-alt2",
+	"description": "Vertical add-on card with image, details link and quantity selector. Implements DESIGN_SYSTEM §8.2 (Add-On Card). Scaffold only — built in Phase 3.",
+	"keywords": ["swissblue", "add-on", "card"],
+	"textdomain": "swissblue-fse",
+	"supports": {
+		"html": false
+	}
+}

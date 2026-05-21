@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "swissblue/property-hero",
+	"version": "0.1.0",
+	"title": "Property Hero",
+	"category": "swissblue",
+	"icon": "cover-image",
+	"description": "Full-width property hero with overlaid content and a primary CTA. Implements DESIGN_SYSTEM §8.1 (Primary Button) and optionally §8.6 (AI Banner). Scaffold only — built in Phase 3.",
+	"keywords": ["swissblue", "property", "hero"],
+	"textdomain": "swissblue-fse",
+	"supports": {
+		"html": false
+	}
+}

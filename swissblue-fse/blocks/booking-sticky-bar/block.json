@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "swissblue/booking-sticky-bar",
+	"version": "0.1.0",
+	"title": "Booking Sticky Bar",
+	"category": "swissblue",
+	"icon": "money-alt",
+	"description": "Fixed bottom price bar with grand total and Continue CTA. Implements DESIGN_SYSTEM §8.8 (Sticky Bottom Price Bar); the source orange CTA is adapted to the SwissBlue primary. Scaffold only — built in Phase 3.",
+	"keywords": ["swissblue", "booking", "sticky"],
+	"textdomain": "swissblue-fse",
+	"supports": {
+		"html": false
+	}
+}

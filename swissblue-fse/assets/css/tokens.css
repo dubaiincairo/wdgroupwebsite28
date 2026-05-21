@@ -1,0 +1,128 @@
+/**
+ * SwissBlue FSE — design tokens.
+ *
+ * The :where(:root) custom-property block below is the BNY-CSDS token set,
+ * reproduced verbatim from DESIGN_SYSTEM.md §13.1. Do NOT introduce tokens
+ * beyond this set (DESIGN_SYSTEM §15.3 / project rule §11).
+ *
+ * --primary, --primary-light and --primary-hover are intentionally left as
+ * TODOs: the SwissBlue brand hex has not been provided yet (Phase 2).
+ *
+ * Self-hosted Inter @font-face declarations (DESIGN_SYSTEM §3.1, §11.4) are
+ * defined first so the typography tokens resolve correctly. Inter is NEVER
+ * loaded from the Google Fonts CDN. Drop the WOFF2 files into ../fonts/
+ * (see ../fonts/README.md).
+ */
+
+/* ─── Self-hosted Inter (per DESIGN_SYSTEM §3.1 & §11.4) ─────────────── */
+
+/* Latin subset — loaded first for fast English render. */
+@font-face {
+	font-family: 'Inter';
+	src: url('../fonts/inter-latin.woff2') format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC;
+	font-display: swap;
+}
+
+/* Arabic subset — mandatory for the default ar_SA locale. */
+@font-face {
+	font-family: 'Inter';
+	src: url('../fonts/inter-arabic.woff2') format('woff2');
+	unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+	font-display: swap;
+}
+
+/* ─── Design tokens (DESIGN_SYSTEM §13.1) ───────────────────────────── */
+
+:where(:root) {
+	/* Color: Primary — TODO Phase 2: awaiting SwissBlue brand hex (see §13 Q1). */
+	/* --primary:       #xxxxxx; */
+	/* --primary-light: color-mix(in srgb, var(--primary) 14%, white); */
+	/* --primary-hover: color-mix(in srgb, var(--primary) 82%, black); */
+
+	/* Color: AI gradient (reserved — AI features only, DESIGN_SYSTEM §2.2) */
+	--ai-gradient: linear-gradient(135deg, #f759ab 0%, #c41d7f 100%);
+	--ai-gradient-soft: linear-gradient(135deg, #fff0f6 0%, #ffd6e7 100%);
+
+	/* Color: Secondary accent */
+	--accent: #6d28d9;
+
+	/* Color: Semantic */
+	--success: #059669; --success-light: #e7f6ec;
+	--warning: #ce8300; --warning-light: #fff6db;
+	--error:   #e8493d; --error-light:   #fff1f3;
+	--info:    #2563eb; --info-light:    #eff6ff;
+
+	/* Color: Text */
+	--text-primary:    #111827;
+	--text-secondary:  #6b7280;
+	--text-tertiary:   #9ea3aa;
+	--text-disabled:   #989ca6;
+	--text-on-primary: #ffffff;
+	--text-on-dark:    #ffffff;
+
+	/* Color: Backgrounds */
+	--background:            #f9fafb;
+	--background-card:       #ffffff;
+	--background-subtle:     #f3f6f9;
+	--background-promo-soft: #fff7ec;
+	--background-dark:       #111827;
+	--background-overlay:    rgba(17, 24, 39, 0.6);
+
+	/* Color: Borders */
+	--border:        #e5e7eb;
+	--border-form:   #dce0e6;
+	--border-strong: #9ca3af;
+	--border-focus:  var(--primary);
+	--border-error:  var(--error);
+
+	/* Typography */
+	--font-sans: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont,
+	             'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	--font-arabic: 'Helvetica Neue Arabic', 'Tahoma', sans-serif;
+
+	--text-display: 40px;  --text-3xl: 34px;  --text-2xl: 24px;
+	--text-xl: 20px;       --text-lg: 18px;   --text-md: 16px;
+	--text-base: 14px;     --text-sm: 12px;   --text-xs: 10px;
+
+	--fw-light: 300;     --fw-regular: 400;  --fw-medium: 500;
+	--fw-semibold: 600;  --fw-bold: 700;
+
+	/* Spacing */
+	--space-xxxs: 2px;  --space-xxs: 4px;   --space-xs: 8px;
+	--space-sm: 12px;   --space-md: 16px;   --space-lg: 20px;
+	--space-xl: 24px;   --space-xxl: 36px;  --space-xxxl: 72px;
+
+	/* Radii */
+	--radius-xs: 4px;   --radius-sm: 8px;   --radius-md: 12px;
+	--radius-lg: 16px;  --radius-xl: 24px;  --radius-full: 9999px;
+
+	/* Shadows */
+	--shadow-card:         0 3px 12px rgba(0,0,0,0.05), 0 0 2px rgba(0,0,0,0.10);
+	--shadow-elevated:     0 12px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
+	--shadow-button-hover: 0 4px 12px rgba(255,122,69,0.30);
+	--shadow-focus-ring:   0 0 0 3px rgba(255,122,69,0.25);
+
+	/* Layout */
+	--container-narrow:  768px;
+	--container-default: 1200px;
+	--container-wide:    1330px;
+
+	--header-height-desktop:    146px;
+	--header-height-mobile:     187px;
+	--sticky-banner-height:     90px;
+	--sticky-bottom-bar-height: 72px;
+
+	/* Form heights */
+	--form-height-xs: 24px;  --form-height-sm: 32px;
+	--form-height:    40px;  --form-height-lg: 48px;
+
+	/* Animation */
+	--ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+	--ease-out:     cubic-bezier(0, 0, 0.2, 1);
+	--ease-in:      cubic-bezier(0.4, 0, 1, 1);
+	--ease-spring:  cubic-bezier(0.34, 1.56, 0.64, 1);
+	--duration-fast:    150ms;
+	--duration-default: 200ms;
+	--duration-slow:    300ms;
+}

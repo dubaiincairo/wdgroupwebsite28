@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "swissblue/amenity-grid",
+	"version": "0.1.0",
+	"title": "Amenity Grid",
+	"category": "swissblue",
+	"icon": "grid-view",
+	"description": "Responsive grid of amenity icons and labels. Follows the iconography rules in DESIGN_SYSTEM §9. Scaffold only — built in Phase 3.",
+	"keywords": ["swissblue", "amenity", "grid"],
+	"textdomain": "swissblue-fse",
+	"supports": {
+		"html": false
+	}
+}

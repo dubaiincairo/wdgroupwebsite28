@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "swissblue/gallery-carousel",
+	"version": "0.1.0",
+	"title": "Gallery Carousel",
+	"category": "swissblue",
+	"icon": "images-alt2",
+	"description": "RTL-aware image carousel (Swiper.js). Honours the directional-component rules in DESIGN_SYSTEM §11.3 and the animation restraint in §10. Scaffold only — built in Phase 3.",
+	"keywords": ["swissblue", "gallery", "carousel", "swiper"],
+	"textdomain": "swissblue-fse",
+	"supports": {
+		"html": false
+	}
+}

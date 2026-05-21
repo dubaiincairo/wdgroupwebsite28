@@ -1,0 +1,11 @@
+/**
+ * SwissBlue FSE — Tailwind CSS v4 entry.
+ *
+ * Compiled by Vite to dist/css/tailwind.min.css. The v3-style JS config
+ * (tailwind.config.js) is loaded via @config, mirroring DESIGN_SYSTEM §13.3.
+ *
+ * Design tokens (CSS custom properties) and @font-face live in tokens.css,
+ * which is enqueued separately by inc/enqueue.php.
+ */
+@import "tailwindcss";
+@config "../../tailwind.config.js";

@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "swissblue/room-card",
+	"version": "0.1.0",
+	"title": "Room Card",
+	"category": "swissblue",
+	"icon": "admin-home",
+	"description": "Room type card with image, inclusions and price sidebar — the signature component. Implements DESIGN_SYSTEM §8.2 (Room Card). Scaffold only — built in Phase 3.",
+	"keywords": ["swissblue", "room", "card"],
+	"textdomain": "swissblue-fse",
+	"supports": {
+		"html": false
+	}
+}

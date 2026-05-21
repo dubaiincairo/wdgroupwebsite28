@@ -1,0 +1,27 @@
+/*
+Theme Name:        SwissBlue FSE
+Theme URI:         https://swissblue.sa
+Author:            SwissBlue Hotels Group
+Author URI:        https://swissblue.sa
+Description:       Custom block theme for SwissBlue Hotels Group, implementing the BNY-CSDS design system.
+Version:           0.1.0
+Requires PHP:      8.3
+Requires at least: 7.0
+Tested up to:      7.0
+License:           GPL-2.0-or-later
+License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:       swissblue-fse
+Domain Path:       /languages
+Tags:              full-site-editing, block-patterns, rtl-language-support, accessibility-ready
+RTL:               yes
+*/
+
+/*
+ * SwissBlue FSE is a Full-Site-Editing (FSE) block theme.
+ *
+ * Visual styling is driven by theme.json (Phase 2) plus compiled CSS in
+ * assets/ and dist/ — this file intentionally carries the theme header only.
+ *
+ * DESIGN_SYSTEM.md (BNY-CSDS) is the single source of truth for every design
+ * token. See §13.1 for the CSS custom properties mirrored in assets/css/tokens.css.
+ */
