@@ -29,5 +29,11 @@ The default language is Arabic (ar_SA, RTL); English (en_US, LTR) is secondary.
 == Changelog ==
 
 = 0.1.0 =
-* Phase 1 — theme scaffold: folder structure, theme header, modular includes,
-  custom post types, amenity taxonomy, build tooling, and design tokens.
+* Initial release of the SwissBlue FSE theme (Phases 1-6).
+* Theme scaffold, build tooling (Vite + Tailwind v4), and BNY-CSDS design
+  tokens; theme.json with the SwissBlue brand palette.
+* Custom post types (property, room, offer) and the amenity taxonomy.
+* Ten custom blocks, ACF Pro field groups, and Block Bindings sources.
+* All block templates and template parts.
+* Hotel JSON-LD schema, RankMath and Polylang integration.
+* letsbook.me booking bridge and the [swissblue_booking] shortcode.
