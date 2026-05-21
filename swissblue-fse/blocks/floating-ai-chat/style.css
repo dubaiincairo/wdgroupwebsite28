@@ -1,0 +1,65 @@
+/**
+ * swissblue/floating-ai-chat — DESIGN_SYSTEM §8.9 (Floating Action Buttons).
+ * 56px circle pinned to the inline-end corner; expands to show the label on
+ * hover/focus. Mirrors in RTL via logical properties.
+ */
+.swissblue-ai-chat {
+	position: fixed;
+	inset-block-end: var(--wp--preset--spacing--xl);
+	inset-inline-end: var(--wp--preset--spacing--xl);
+	z-index: 50;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 56px;
+	height: 56px;
+	padding-inline: var(--wp--preset--spacing--md);
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: var(--radius-full);
+	background-color: var(--wp--preset--color--background-card);
+	color: var(--wp--preset--color--primary);
+	box-shadow: var(--wp--preset--shadow--elevated);
+	text-decoration: none;
+	transition: transform var(--duration-default, 200ms) ease;
+}
+
+.swissblue-ai-chat:hover,
+.swissblue-ai-chat:focus-visible {
+	transform: translateY(-2px);
+}
+
+.swissblue-ai-chat:focus-visible {
+	outline: none;
+	box-shadow: var(--wp--preset--shadow--focus-ring), var(--wp--preset--shadow--elevated);
+}
+
+.swissblue-ai-chat__icon {
+	flex-shrink: 0;
+}
+
+.swissblue-ai-chat__label {
+	max-width: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	opacity: 0;
+	font-size: var(--wp--preset--font-size--base);
+	font-weight: var(--fw-semibold);
+	color: var(--wp--preset--color--text-primary);
+	transition: max-width var(--duration-default, 200ms) ease,
+		opacity var(--duration-default, 200ms) ease,
+		margin-inline-start var(--duration-default, 200ms) ease;
+}
+
+.swissblue-ai-chat:hover .swissblue-ai-chat__label,
+.swissblue-ai-chat:focus-visible .swissblue-ai-chat__label {
+	max-width: 160px;
+	margin-inline-start: var(--wp--preset--spacing--xs);
+	opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.swissblue-ai-chat,
+	.swissblue-ai-chat__label {
+		transition: none;
+	}
+}

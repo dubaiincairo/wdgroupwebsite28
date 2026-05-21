@@ -1,0 +1,38 @@
+/**
+ * swissblue/gallery-carousel — DESIGN_SYSTEM §10.4 (no auto-play), §11.3 (RTL).
+ * Native CSS scroll-snap: the scroll axis follows the document direction, so
+ * the carousel reads right-to-left in Arabic with no extra code.
+ */
+.swissblue-gallery__track {
+	display: flex;
+	gap: var(--wp--preset--spacing--md);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: thin;
+}
+
+.swissblue-gallery__slide {
+	flex: 0 0 auto;
+	width: min(85%, 480px);
+	scroll-snap-align: start;
+}
+
+.swissblue-gallery__slide img {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+	border-radius: var(--radius-lg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.swissblue-gallery__track {
+		scroll-behavior: auto;
+	}
+}

@@ -6,10 +6,19 @@
 	"title": "Amenity Grid",
 	"category": "swissblue",
 	"icon": "grid-view",
-	"description": "Responsive grid of amenity icons and labels. Follows the iconography rules in DESIGN_SYSTEM §9. Scaffold only — built in Phase 3.",
+	"description": "Responsive grid of amenity icons and labels (4 / 2 / 1 columns). Follows the iconography rules in DESIGN_SYSTEM §9 and the grid spec §7.4.",
 	"keywords": ["swissblue", "amenity", "grid"],
 	"textdomain": "swissblue-fse",
+	"attributes": {
+		"heading": { "type": "string", "default": "" },
+		"items": { "type": "string", "default": "" }
+	},
 	"supports": {
-		"html": false
-	}
+		"html": false,
+		"anchor": true,
+		"align": ["wide"]
+	},
+	"editorScript": "swissblue-amenity-grid-editor",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
 }

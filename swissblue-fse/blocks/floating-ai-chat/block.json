@@ -6,11 +6,19 @@
 	"title": "Floating AI Chat",
 	"category": "swissblue",
 	"icon": "format-chat",
-	"description": "Persistent floating AI concierge chat bubble. Implements DESIGN_SYSTEM §8.9 (Floating Action Buttons — AI Chat). Scaffold only — built in Phase 3, and only if SwissBlue adopts AI features.",
+	"description": "Persistent floating AI concierge chat bubble. Implements DESIGN_SYSTEM §8.9 (Floating Action Buttons — AI Chat); pinned to the inline-end corner and mirrored in RTL per §11.3.",
 	"keywords": ["swissblue", "ai", "chat", "concierge"],
 	"textdomain": "swissblue-fse",
+	"attributes": {
+		"label": { "type": "string", "default": "AI Chat" },
+		"url": { "type": "string", "default": "" }
+	},
 	"supports": {
 		"html": false,
-		"inserter": false
-	}
+		"multiple": false,
+		"reusable": false
+	},
+	"editorScript": "swissblue-floating-ai-chat-editor",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
 }

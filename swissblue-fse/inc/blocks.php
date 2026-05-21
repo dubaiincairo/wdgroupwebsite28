@@ -17,6 +17,27 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
+ * The slugs of every block folder in blocks/ (each contains a block.json).
+ *
+ * @since 0.1.0
+ * @return string[] Block directory slugs.
+ */
+function swissblue_block_slugs() {
+	return array(
+		'property-hero',
+		'room-card',
+		'booking-sticky-bar',
+		'add-on-card',
+		'amenity-grid',
+		'progress-stepper',
+		'ai-banner',
+		'floating-rate-check',
+		'floating-ai-chat',
+		'gallery-carousel',
+	);
+}
+
+/**
  * Add the "SwissBlue" category to the block inserter.
  *
  * @since 0.1.0
@@ -47,7 +68,7 @@ add_filter( 'block_categories_all', 'swissblue_block_category' );
  * @return void
  */
 function swissblue_register_blocks() {
-	$blocks  = array( 'property-hero', 'room-card', 'booking-sticky-bar' );
+	$blocks  = swissblue_block_slugs();
 	$version = defined( 'SWISSBLUE_FSE_VERSION' ) ? SWISSBLUE_FSE_VERSION : false;
 	$deps    = array(
 		'wp-blocks',
@@ -79,7 +100,7 @@ add_action( 'init', 'swissblue_register_blocks' );
  * @return void
  */
 function swissblue_set_block_script_translations() {
-	foreach ( array( 'property-hero', 'room-card', 'booking-sticky-bar' ) as $block ) {
+	foreach ( swissblue_block_slugs() as $block ) {
 		wp_set_script_translations( "swissblue-{$block}-editor", 'swissblue-fse', get_theme_file_path( 'languages' ) );
 	}
 }

@@ -1,0 +1,51 @@
+/**
+ * swissblue/amenity-grid — DESIGN_SYSTEM §9 (Iconography), §7.4 (grid spec).
+ * 4 columns desktop, 2 tablet, 1 mobile. Tokens only; logical properties.
+ */
+.swissblue-amenity-grid__heading {
+	margin: 0 0 var(--wp--preset--spacing--lg);
+	font-size: var(--wp--preset--font-size--2xl);
+	font-weight: var(--fw-semibold);
+	color: var(--wp--preset--color--text-primary);
+}
+
+.swissblue-amenity-grid__list {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: var(--wp--preset--spacing--md);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.swissblue-amenity-grid__item {
+	display: flex;
+	align-items: center;
+	gap: var(--wp--preset--spacing--sm);
+	padding: var(--wp--preset--spacing--md);
+	background-color: var(--wp--preset--color--background-card);
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: var(--radius-md);
+}
+
+.swissblue-amenity-grid__icon {
+	flex-shrink: 0;
+	color: var(--wp--preset--color--primary);
+}
+
+.swissblue-amenity-grid__label {
+	font-size: var(--wp--preset--font-size--base);
+	color: var(--wp--preset--color--text-primary);
+}
+
+@media (max-width: 1024px) {
+	.swissblue-amenity-grid__list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 600px) {
+	.swissblue-amenity-grid__list {
+		grid-template-columns: 1fr;
+	}
+}

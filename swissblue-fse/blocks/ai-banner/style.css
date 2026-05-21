@@ -1,0 +1,45 @@
+/**
+ * swissblue/ai-banner — DESIGN_SYSTEM §8.6 (AI Gradient Banner).
+ * The AI gradient is reserved for AI features only (§2.2) and is never
+ * combined with the brand primary in the same component.
+ */
+.swissblue-ai-banner {
+	display: flex;
+	align-items: center;
+	gap: var(--wp--preset--spacing--md);
+	padding: var(--wp--preset--spacing--lg);
+	border-radius: var(--radius-lg);
+	background: var(--wp--preset--gradient--ai-gradient);
+	color: #ffffff;
+}
+
+.swissblue-ai-banner__icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: var(--radius-full);
+	background-color: rgba(255, 255, 255, 0.18);
+	color: #ffffff;
+}
+
+.swissblue-ai-banner__text {
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--xxs);
+}
+
+.swissblue-ai-banner__title {
+	margin: 0;
+	font-size: var(--wp--preset--font-size--lg);
+	font-weight: var(--fw-semibold);
+}
+
+.swissblue-ai-banner__subtitle {
+	margin: 0;
+	font-size: var(--wp--preset--font-size--sm);
+	/* Subtitle on the AI gradient — DESIGN_SYSTEM §3.4 / §8.6. */
+	color: rgba(255, 255, 255, 0.85);
+}

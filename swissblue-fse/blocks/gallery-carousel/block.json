@@ -6,10 +6,18 @@
 	"title": "Gallery Carousel",
 	"category": "swissblue",
 	"icon": "images-alt2",
-	"description": "RTL-aware image carousel (Swiper.js). Honours the directional-component rules in DESIGN_SYSTEM §11.3 and the animation restraint in §10. Scaffold only — built in Phase 3.",
-	"keywords": ["swissblue", "gallery", "carousel", "swiper"],
+	"description": "RTL-aware image carousel built on native CSS scroll-snap (no auto-play, per DESIGN_SYSTEM §10.4; directional behaviour per §11.3).",
+	"keywords": ["swissblue", "gallery", "carousel"],
 	"textdomain": "swissblue-fse",
+	"attributes": {
+		"images": { "type": "array", "default": [] }
+	},
 	"supports": {
-		"html": false
-	}
+		"html": false,
+		"anchor": true,
+		"align": ["wide", "full"]
+	},
+	"editorScript": "swissblue-gallery-carousel-editor",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
 }

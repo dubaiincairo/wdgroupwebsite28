@@ -6,10 +6,25 @@
 	"title": "Add-On Card",
 	"category": "swissblue",
 	"icon": "plus-alt2",
-	"description": "Vertical add-on card with image, details link and quantity selector. Implements DESIGN_SYSTEM §8.2 (Add-On Card). Scaffold only — built in Phase 3.",
+	"description": "Vertical add-on card with image, details link and price footer. Implements DESIGN_SYSTEM §8.2 (Add-On Card).",
 	"keywords": ["swissblue", "add-on", "card"],
 	"textdomain": "swissblue-fse",
+	"attributes": {
+		"title": { "type": "string", "default": "" },
+		"imageUrl": { "type": "string", "default": "" },
+		"imageId": { "type": "number", "default": 0 },
+		"detailsUrl": { "type": "string", "default": "" },
+		"priceLabel": { "type": "string", "default": "From" },
+		"price": { "type": "string", "default": "" },
+		"currency": { "type": "string", "default": "SAR" },
+		"selectText": { "type": "string", "default": "Add" },
+		"selectUrl": { "type": "string", "default": "" }
+	},
 	"supports": {
-		"html": false
-	}
+		"html": false,
+		"anchor": true
+	},
+	"editorScript": "swissblue-add-on-card-editor",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
 }

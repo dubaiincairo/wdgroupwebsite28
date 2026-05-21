@@ -1,0 +1,44 @@
+/**
+ * swissblue/floating-rate-check — DESIGN_SYSTEM §8.9 (Floating Action Buttons).
+ * Pinned to the inline-start corner; mirrors in RTL via logical properties.
+ */
+.swissblue-rate-check {
+	position: fixed;
+	inset-block-end: var(--wp--preset--spacing--xl);
+	inset-inline-start: var(--wp--preset--spacing--xl);
+	z-index: 50;
+	display: inline-flex;
+	align-items: center;
+	gap: var(--wp--preset--spacing--xs);
+	padding-block: var(--wp--preset--spacing--sm);
+	padding-inline: var(--wp--preset--spacing--lg);
+	border-radius: var(--radius-full);
+	background-color: var(--wp--preset--color--accent);
+	color: #ffffff;
+	font-size: var(--wp--preset--font-size--base);
+	font-weight: var(--fw-semibold);
+	text-decoration: none;
+	box-shadow: var(--wp--preset--shadow--elevated);
+}
+
+.swissblue-rate-check__badge {
+	position: absolute;
+	inset-block-start: -8px;
+	inset-inline-end: -8px;
+	padding-block: var(--wp--preset--spacing--xxs);
+	padding-inline: var(--wp--preset--spacing--xs);
+	border-radius: var(--radius-full);
+	background-color: var(--wp--preset--color--error);
+	color: #ffffff;
+	font-size: var(--wp--preset--font-size--xs);
+	font-weight: var(--fw-semibold);
+}
+
+.swissblue-rate-check__icon {
+	flex-shrink: 0;
+}
+
+.swissblue-rate-check:focus-visible {
+	outline: none;
+	box-shadow: var(--wp--preset--shadow--focus-ring), var(--wp--preset--shadow--elevated);
+}

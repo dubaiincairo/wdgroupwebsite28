@@ -1,0 +1,75 @@
+/**
+ * swissblue/progress-stepper — DESIGN_SYSTEM §8.7 (Progress Stepper).
+ * Tokens only; logical properties so the connector mirrors in RTL.
+ */
+.swissblue-stepper__list {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.swissblue-stepper__step {
+	position: relative;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--wp--preset--spacing--xs);
+	text-align: center;
+}
+
+/* Connector line between circles — drawn from this circle to the next. */
+.swissblue-stepper__step:not(:last-child)::after {
+	content: "";
+	position: absolute;
+	inset-block-start: 12px;
+	inset-inline-start: calc(50% + 12px);
+	inset-inline-end: calc(-50% + 12px);
+	height: 1px;
+	background-color: var(--wp--preset--color--border);
+}
+
+.swissblue-stepper__marker {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	border-radius: var(--radius-full);
+	font-size: var(--wp--preset--font-size--sm);
+	font-weight: var(--fw-semibold);
+	line-height: 1;
+}
+
+.swissblue-stepper__label {
+	font-size: var(--wp--preset--font-size--sm);
+	font-weight: var(--fw-medium);
+}
+
+/* Pending */
+.swissblue-stepper__step.is-pending .swissblue-stepper__marker {
+	border: 1.5px solid var(--wp--preset--color--border);
+	color: var(--wp--preset--color--text-secondary);
+}
+.swissblue-stepper__step.is-pending .swissblue-stepper__label {
+	color: var(--wp--preset--color--text-secondary);
+}
+
+/* Active */
+.swissblue-stepper__step.is-active .swissblue-stepper__marker {
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--text-on-primary);
+}
+.swissblue-stepper__step.is-active .swissblue-stepper__label {
+	color: var(--wp--preset--color--text-primary);
+}
+
+/* Completed */
+.swissblue-stepper__step.is-completed .swissblue-stepper__marker {
+	background-color: var(--wp--preset--color--success);
+	color: var(--wp--preset--color--text-on-primary);
+}
+.swissblue-stepper__step.is-completed .swissblue-stepper__label {
+	color: var(--wp--preset--color--text-primary);
+}

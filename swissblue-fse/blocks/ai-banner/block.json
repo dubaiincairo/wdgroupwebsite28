@@ -6,11 +6,19 @@
 	"title": "AI Banner",
 	"category": "swissblue",
 	"icon": "superhero-alt",
-	"description": "AI-recommended banner using the reserved pink-to-magenta AI gradient. Implements DESIGN_SYSTEM §8.6 (AI Gradient Banner); the gradient is reserved for AI features only (§2.2). Scaffold only — built in Phase 3, and only if SwissBlue adopts AI features.",
+	"description": "AI-recommended banner using the reserved pink-to-magenta AI gradient. Implements DESIGN_SYSTEM §8.6 (AI Gradient Banner); the gradient is reserved for AI features only (§2.2).",
 	"keywords": ["swissblue", "ai", "banner"],
 	"textdomain": "swissblue-fse",
+	"attributes": {
+		"title": { "type": "string", "default": "" },
+		"subtitle": { "type": "string", "default": "" }
+	},
 	"supports": {
 		"html": false,
-		"inserter": false
-	}
+		"anchor": true,
+		"align": ["wide"]
+	},
+	"editorScript": "swissblue-ai-banner-editor",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
 }

@@ -6,10 +6,19 @@
 	"title": "Progress Stepper",
 	"category": "swissblue",
 	"icon": "editor-ol",
-	"description": "Horizontal booking-flow stepper with pending, active and completed states. Implements DESIGN_SYSTEM §8.7 (Progress Stepper). Scaffold only — built in Phase 3.",
+	"description": "Horizontal booking-flow stepper with pending, active and completed states. Implements DESIGN_SYSTEM §8.7 (Progress Stepper).",
 	"keywords": ["swissblue", "stepper", "progress"],
 	"textdomain": "swissblue-fse",
+	"attributes": {
+		"steps": { "type": "string", "default": "" },
+		"currentStep": { "type": "number", "default": 1 }
+	},
 	"supports": {
-		"html": false
-	}
+		"html": false,
+		"anchor": true,
+		"align": ["wide"]
+	},
+	"editorScript": "swissblue-progress-stepper-editor",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
 }
