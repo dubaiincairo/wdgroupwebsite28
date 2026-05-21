@@ -2,9 +2,7 @@
 /**
  * SwissBlue FSE — shared helper utilities.
  *
- * Small, reusable functions used across the theme. Bodies are intentionally
- * left as stubs in Phase 1; each is implemented in the phase noted in its
- * inline TODO.
+ * Small, reusable functions used across the theme (blocks, bindings, schema).
  *
  * @package SwissBlue_FSE
  * @since   0.1.0
@@ -18,17 +16,24 @@ defined( 'ABSPATH' ) || exit;
  * Resolves the active Polylang language, falling back to the WordPress locale.
  *
  * @since 0.1.0
- * @return string Two-letter language code, or an empty string if undetermined.
+ * @return string Two-letter language code.
  */
 function swissblue_get_current_lang() {
-	// TODO Phase 4: integrate with pll_current_language(), fall back to get_locale().
+	if ( function_exists( 'pll_current_language' ) ) {
+		$lang = pll_current_language( 'slug' );
+		if ( is_string( $lang ) && '' !== $lang ) {
+			return $lang;
+		}
+	}
+
+	return substr( get_locale(), 0, 2 );
 }
 
 /**
  * Get a language-specific ACF field value.
  *
- * Selects `{base_key}_ar` or `{base_key}_en` based on the current language
- * (brief §6 stores localised strings in suffixed fields).
+ * Reads `{base_key}_ar` or `{base_key}_en` for the active language, falling
+ * back to the other language so a value is always shown when one exists.
  *
  * @since 0.1.0
  * @param int    $post_id  Post ID to read the field from.
@@ -36,7 +41,20 @@ function swissblue_get_current_lang() {
  * @return string The localised field value, or an empty string.
  */
 function swissblue_get_localized_field( $post_id, $base_key ) {
-	// TODO Phase 3: read the suffixed ACF field for the active language.
+	if ( ! function_exists( 'get_field' ) ) {
+		return '';
+	}
+
+	$is_arabic = ( 'ar' === swissblue_get_current_lang() );
+	$primary   = $base_key . ( $is_arabic ? '_ar' : '_en' );
+	$fallback  = $base_key . ( $is_arabic ? '_en' : '_ar' );
+
+	$value = get_field( $primary, $post_id );
+	if ( ! is_string( $value ) || '' === $value ) {
+		$value = get_field( $fallback, $post_id );
+	}
+
+	return is_string( $value ) ? $value : '';
 }
 
 /**
@@ -46,23 +64,35 @@ function swissblue_get_localized_field( $post_id, $base_key ) {
  * bidirectional algorithm does not reorder the digits.
  *
  * @since 0.1.0
- * @param float|int $amount   The numeric amount.
- * @param string    $currency Currency label (e.g. 'SAR', 'ريال').
- * @return string Escaped HTML markup for the price.
+ * @param float|int|string $amount   The numeric amount.
+ * @param string           $currency Currency label (e.g. 'SAR', 'ريال').
+ * @return string Escaped HTML markup for the price, or an empty string.
  */
 function swissblue_format_price( $amount, $currency = 'SAR' ) {
-	// TODO Phase 3: build the dir="ltr"-wrapped, escaped price markup.
+	if ( null === $amount || '' === $amount ) {
+		return '';
+	}
+
+	return '<span class="swissblue-price">'
+		. '<span dir="ltr">' . esc_html( (string) $amount ) . '</span> '
+		. esc_html( $currency )
+		. '</span>';
 }
 
 /**
- * Build the star-rating markup for a property.
+ * Build the star-rating string for a property.
+ *
+ * Returns filled/empty star characters (DESIGN_SYSTEM §8.2). Callers that
+ * render this for sighted users should pair it with an accessible label.
  *
  * @since 0.1.0
- * @param int $rating Whole-star rating, 1–5.
- * @return string Escaped HTML star row with an accessible label.
+ * @param int $rating Whole-star rating, 0–5.
+ * @return string Star characters, e.g. "★★★★☆".
  */
 function swissblue_star_rating_markup( $rating ) {
-	// TODO Phase 3: render ★ × rating with an aria-label, per DESIGN_SYSTEM §8.2.
+	$rating = max( 0, min( 5, (int) $rating ) );
+
+	return str_repeat( '★', $rating ) . str_repeat( '☆', 5 - $rating );
 }
 
 /**
@@ -73,5 +103,5 @@ function swissblue_star_rating_markup( $rating ) {
  * @return string Fully-qualified asset URL.
  */
 function swissblue_asset_uri( $relative_path ) {
-	// TODO Phase 2: return get_theme_file_uri( 'assets/' . ltrim( $relative_path, '/' ) ).
+	return get_theme_file_uri( 'assets/' . ltrim( $relative_path, '/' ) );
 }
