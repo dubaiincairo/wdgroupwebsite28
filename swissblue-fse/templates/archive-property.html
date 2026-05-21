@@ -1,22 +1,42 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
+<!-- wp:template-part {"slug":"promo-ribbon"} /-->
+
 <!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
 <main class="wp-block-group">
-	<!-- wp:query-title {"type":"archive"} /-->
-	<!-- wp:query {"queryId":0,"query":{"perPage":12,"pages":0,"offset":0,"postType":"property","order":"asc","orderBy":"title","inherit":false}} -->
-	<div class="wp-block-query">
-		<!-- wp:post-template -->
-			<!-- wp:post-featured-image {"isLink":true} /-->
-			<!-- wp:post-title {"isLink":true} /-->
-			<!-- wp:post-excerpt /-->
+	<!-- wp:spacer {"height":"var:preset|spacing|xl"} -->
+	<div style="height:var(--wp--preset--spacing--xl)" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
+
+	<!-- wp:heading {"textAlign":"center","level":1,"fontSize":"3xl"} -->
+	<h1 class="wp-block-heading has-text-align-center has-3xl-font-size">Our properties</h1>
+	<!-- /wp:heading -->
+
+	<!-- wp:query {"queryId":0,"query":{"perPage":12,"pages":0,"offset":0,"postType":"property","order":"asc","orderBy":"title","inherit":true},"align":"wide"} -->
+	<div class="wp-block-query alignwide">
+		<!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
+			<!-- wp:post-featured-image {"isLink":true,"style":{"border":{"radius":"16px"}}} /-->
+			<!-- wp:post-title {"isLink":true,"fontSize":"xl"} /-->
+			<!-- wp:paragraph {"fontSize":"sm","textColor":"text-secondary","metadata":{"bindings":{"content":{"source":"swissblue/property-location"}}}} -->
+			<p class="has-text-secondary-color has-text-color has-sm-font-size"></p>
+			<!-- /wp:paragraph -->
 		<!-- /wp:post-template -->
 		<!-- wp:query-pagination -->
 			<!-- wp:query-pagination-previous /-->
 			<!-- wp:query-pagination-numbers /-->
 			<!-- wp:query-pagination-next /-->
 		<!-- /wp:query-pagination -->
+		<!-- wp:query-no-results -->
+			<!-- wp:paragraph -->
+			<p>No properties have been published yet.</p>
+			<!-- /wp:paragraph -->
+		<!-- /wp:query-no-results -->
 	</div>
 	<!-- /wp:query -->
+
+	<!-- wp:spacer {"height":"var:preset|spacing|xl"} -->
+	<div style="height:var(--wp--preset--spacing--xl)" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
 </main>
 <!-- /wp:group -->
 

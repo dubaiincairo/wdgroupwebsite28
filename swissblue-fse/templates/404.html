@@ -2,13 +2,23 @@
 
 <!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
 <main class="wp-block-group">
-	<!-- wp:heading {"level":1} -->
-	<h1>Page not found</h1>
+	<!-- wp:spacer {"height":"var:preset|spacing|xxl"} -->
+	<div style="height:var(--wp--preset--spacing--xxl)" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
+
+	<!-- wp:heading {"textAlign":"center","level":1,"fontSize":"3xl"} -->
+	<h1 class="wp-block-heading has-text-align-center has-3xl-font-size">Page not found</h1>
 	<!-- /wp:heading -->
-	<!-- wp:paragraph -->
-	<p>The page you are looking for is not available.</p>
+
+	<!-- wp:paragraph {"align":"center","textColor":"text-secondary"} -->
+	<p class="has-text-align-center has-text-secondary-color has-text-color">The page you are looking for is not available. Try a search instead.</p>
 	<!-- /wp:paragraph -->
-	<!-- wp:search {"label":"","buttonText":"Search"} /-->
+
+	<!-- wp:search {"label":"","showLabel":false,"buttonText":"Search","buttonPosition":"button-inside"} /-->
+
+	<!-- wp:spacer {"height":"var:preset|spacing|xxl"} -->
+	<div style="height:var(--wp--preset--spacing--xxl)" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
 </main>
 <!-- /wp:group -->
 

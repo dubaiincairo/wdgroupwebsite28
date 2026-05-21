@@ -1,13 +1,25 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
+<!-- wp:template-part {"slug":"promo-ribbon"} /-->
+
 <!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
 <main class="wp-block-group">
-	<!-- wp:query-title {"type":"archive"} /-->
-	<!-- wp:query {"queryId":0,"query":{"perPage":12,"pages":0,"offset":0,"postType":"offer","order":"desc","orderBy":"date","inherit":false}} -->
-	<div class="wp-block-query">
-		<!-- wp:post-template -->
-			<!-- wp:post-featured-image {"isLink":true} /-->
-			<!-- wp:post-title {"isLink":true} /-->
+	<!-- wp:spacer {"height":"var:preset|spacing|xl"} -->
+	<div style="height:var(--wp--preset--spacing--xl)" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
+
+	<!-- wp:heading {"textAlign":"center","level":1,"fontSize":"3xl"} -->
+	<h1 class="wp-block-heading has-text-align-center has-3xl-font-size">Offers &amp; packages</h1>
+	<!-- /wp:heading -->
+
+	<!-- wp:query {"queryId":0,"query":{"perPage":12,"pages":0,"offset":0,"postType":"offer","order":"desc","orderBy":"date","inherit":true},"align":"wide"} -->
+	<div class="wp-block-query alignwide">
+		<!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
+			<!-- wp:post-featured-image {"isLink":true,"style":{"border":{"radius":"16px"}}} /-->
+			<!-- wp:paragraph {"fontSize":"xs","textColor":"success","metadata":{"bindings":{"content":{"source":"swissblue/offer-discount-badge"}}}} -->
+			<p class="has-success-color has-text-color has-xs-font-size"></p>
+			<!-- /wp:paragraph -->
+			<!-- wp:post-title {"isLink":true,"fontSize":"xl"} /-->
 			<!-- wp:post-excerpt /-->
 		<!-- /wp:post-template -->
 		<!-- wp:query-pagination -->
@@ -15,8 +27,17 @@
 			<!-- wp:query-pagination-numbers /-->
 			<!-- wp:query-pagination-next /-->
 		<!-- /wp:query-pagination -->
+		<!-- wp:query-no-results -->
+			<!-- wp:paragraph -->
+			<p>No offers are available right now.</p>
+			<!-- /wp:paragraph -->
+		<!-- /wp:query-no-results -->
 	</div>
 	<!-- /wp:query -->
+
+	<!-- wp:spacer {"height":"var:preset|spacing|xl"} -->
+	<div style="height:var(--wp--preset--spacing--xl)" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
 </main>
 <!-- /wp:group -->
 

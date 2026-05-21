@@ -1,13 +1,40 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
+<!-- wp:template-part {"slug":"promo-ribbon"} /-->
+
 <!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
 <main class="wp-block-group">
-	<!-- wp:post-title {"level":1} /-->
-	<!-- wp:post-featured-image /-->
-	<!-- wp:post-content /-->
-	<!-- wp:paragraph -->
-	<p>Room type detail placeholder — room card, gallery and amenities are built in Phase 3 per DESIGN_SYSTEM §8.2.</p>
-	<!-- /wp:paragraph -->
+	<!-- wp:spacer {"height":"var:preset|spacing|xl"} -->
+	<div style="height:var(--wp--preset--spacing--xl)" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
+
+	<!-- wp:post-title {"level":1,"fontSize":"3xl"} /-->
+
+	<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap"}} -->
+	<div class="wp-block-group">
+		<!-- wp:paragraph {"textColor":"text-secondary","metadata":{"bindings":{"content":{"source":"swissblue/room-capacity"}}}} -->
+		<p class="has-text-secondary-color has-text-color"></p>
+		<!-- /wp:paragraph -->
+		<!-- wp:paragraph {"textColor":"primary","fontSize":"md","metadata":{"bindings":{"content":{"source":"swissblue/room-price-from"}}}} -->
+		<p class="has-primary-color has-text-color has-md-font-size"></p>
+		<!-- /wp:paragraph -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:post-featured-image {"style":{"border":{"radius":"16px"}}} /-->
+	<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+
+	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+	<div class="wp-block-buttons">
+		<!-- wp:button -->
+		<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#book">Book this room</a></div>
+		<!-- /wp:button -->
+	</div>
+	<!-- /wp:buttons -->
+
+	<!-- wp:spacer {"height":"var:preset|spacing|xl"} -->
+	<div style="height:var(--wp--preset--spacing--xl)" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
 </main>
 <!-- /wp:group -->
 
