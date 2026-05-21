@@ -80,13 +80,12 @@ export default {
         full: '9999px',
       },
       boxShadow: {
-        // The orange-tinted shadows below are the BNY-CSDS source values
-        // (§13.3). Per DESIGN_SYSTEM §15.2 they are re-derived from the
-        // SwissBlue brand RGB in Phase 2.
+        // Shadows from BNY-CSDS §13.3; the brand-tinted shadows are
+        // re-derived from the SwissBlue primary #2563eb per DESIGN_SYSTEM §15.2.
         card: '0 3px 12px rgba(0,0,0,0.05), 0 0 2px rgba(0,0,0,0.10)',
         elevated: '0 12px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06)',
-        'btn-hover': '0 4px 12px rgba(255,122,69,0.30)',
-        'focus-ring': '0 0 0 3px rgba(255,122,69,0.25)',
+        'btn-hover': '0 4px 12px rgba(37,99,235,0.30)',
+        'focus-ring': '0 0 0 3px rgba(37,99,235,0.25)',
       },
       backgroundImage: {
         // Reserved for AI features only (DESIGN_SYSTEM §2.2).

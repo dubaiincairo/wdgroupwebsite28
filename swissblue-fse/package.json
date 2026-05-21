@@ -1,7 +1,7 @@
 {
   "name": "swissblue-fse",
   "version": "0.1.0",
-  "description": "Custom WordPress 7.0 FSE block theme for SwissBlue Hotels Group, implementing the BNY-CSDS design system.",
+  "description": "Custom WordPress 7.0 FSE block theme for SwissBlue Hospitality Group, implementing the BNY-CSDS design system.",
   "private": true,
   "type": "module",
   "license": "GPL-2.0-or-later",

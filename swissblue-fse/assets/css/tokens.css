@@ -35,10 +35,12 @@
 /* ─── Design tokens (DESIGN_SYSTEM §13.1) ───────────────────────────── */
 
 :where(:root) {
-	/* Color: Primary — TODO Phase 2: awaiting SwissBlue brand hex (see §13 Q1). */
-	/* --primary:       #xxxxxx; */
-	/* --primary-light: color-mix(in srgb, var(--primary) 14%, white); */
-	/* --primary-hover: color-mix(in srgb, var(--primary) 82%, black); */
+	/* Color: Primary — SwissBlue brand blue (per Phase 1 §13 Q1).
+	   #2563eb is the design system's own blue (§2.4 --info), chosen as
+	   --primary; --primary-light / --primary-hover are derived per §2.1. */
+	--primary:       #2563eb;
+	--primary-light: color-mix(in srgb, var(--primary) 14%, white);
+	--primary-hover: color-mix(in srgb, var(--primary) 82%, black);
 
 	/* Color: AI gradient (reserved — AI features only, DESIGN_SYSTEM §2.2) */
 	--ai-gradient: linear-gradient(135deg, #f759ab 0%, #c41d7f 100%);
@@ -100,8 +102,8 @@
 	/* Shadows */
 	--shadow-card:         0 3px 12px rgba(0,0,0,0.05), 0 0 2px rgba(0,0,0,0.10);
 	--shadow-elevated:     0 12px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
-	--shadow-button-hover: 0 4px 12px rgba(255,122,69,0.30);
-	--shadow-focus-ring:   0 0 0 3px rgba(255,122,69,0.25);
+	--shadow-button-hover: 0 4px 12px rgba(37,99,235,0.30);
+	--shadow-focus-ring:   0 0 0 3px rgba(37,99,235,0.25);
 
 	/* Layout */
 	--container-narrow:  768px;

@@ -61,7 +61,7 @@ function swissblue_register_property_cpt() {
 		'property',
 		array(
 			'labels'        => $labels,
-			'description'   => __( 'Hotels within the SwissBlue Hotels Group.', 'swissblue-fse' ),
+			'description'   => __( 'Hotels within the SwissBlue Hospitality Group.', 'swissblue-fse' ),
 			'public'        => true,
 			'has_archive'   => true,
 			'show_in_rest'  => true,

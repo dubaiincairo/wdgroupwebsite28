@@ -1,0 +1,175 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": true,
+		"useRootPaddingAwareAlignments": true,
+		"color": {
+			"defaultPalette": false,
+			"defaultGradients": false,
+			"defaultDuotone": false,
+			"custom": false,
+			"customGradient": false,
+			"customDuotone": false,
+			"palette": [
+				{ "slug": "primary", "name": "Primary", "color": "#2563eb" },
+				{ "slug": "primary-light", "name": "Primary Light", "color": "#e0e9fc" },
+				{ "slug": "primary-hover", "name": "Primary Hover", "color": "#1e51c1" },
+				{ "slug": "accent", "name": "Accent", "color": "#6d28d9" },
+				{ "slug": "success", "name": "Success", "color": "#059669" },
+				{ "slug": "success-light", "name": "Success Light", "color": "#e7f6ec" },
+				{ "slug": "warning", "name": "Warning", "color": "#ce8300" },
+				{ "slug": "warning-light", "name": "Warning Light", "color": "#fff6db" },
+				{ "slug": "error", "name": "Error", "color": "#e8493d" },
+				{ "slug": "error-light", "name": "Error Light", "color": "#fff1f3" },
+				{ "slug": "text-primary", "name": "Text", "color": "#111827" },
+				{ "slug": "text-secondary", "name": "Text Muted", "color": "#6b7280" },
+				{ "slug": "text-tertiary", "name": "Text Faint", "color": "#9ea3aa" },
+				{ "slug": "text-on-primary", "name": "Text On Primary", "color": "#ffffff" },
+				{ "slug": "text-on-dark", "name": "Text On Dark", "color": "#ffffff" },
+				{ "slug": "background", "name": "Page", "color": "#f9fafb" },
+				{ "slug": "background-card", "name": "Card", "color": "#ffffff" },
+				{ "slug": "background-subtle", "name": "Subtle", "color": "#f3f6f9" },
+				{ "slug": "background-promo", "name": "Promo Soft", "color": "#fff7ec" },
+				{ "slug": "background-dark", "name": "Dark", "color": "#111827" },
+				{ "slug": "border", "name": "Border", "color": "#e5e7eb" },
+				{ "slug": "border-form", "name": "Form Border", "color": "#dce0e6" }
+			],
+			"gradients": [
+				{
+					"slug": "ai-gradient",
+					"name": "AI (reserved for AI features only)",
+					"gradient": "linear-gradient(135deg, #f759ab 0%, #c41d7f 100%)"
+				}
+			]
+		},
+		"typography": {
+			"defaultFontSizes": false,
+			"customFontSize": false,
+			"fluid": false,
+			"lineHeight": true,
+			"dropCap": false,
+			"fontFamilies": [
+				{
+					"slug": "sans",
+					"name": "Inter",
+					"fontFamily": "Inter, 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif"
+				}
+			],
+			"fontSizes": [
+				{ "slug": "xs", "name": "Extra Small", "size": "10px" },
+				{ "slug": "sm", "name": "Small", "size": "12px" },
+				{ "slug": "base", "name": "Body", "size": "14px" },
+				{ "slug": "md", "name": "Medium", "size": "16px" },
+				{ "slug": "lg", "name": "Large", "size": "18px" },
+				{ "slug": "xl", "name": "X-Large", "size": "20px" },
+				{ "slug": "2xl", "name": "2X-Large", "size": "24px" },
+				{ "slug": "3xl", "name": "3X-Large", "size": "34px" },
+				{ "slug": "display", "name": "Display", "size": "40px" }
+			]
+		},
+		"spacing": {
+			"customSpacingSize": false,
+			"defaultSpacingSizes": false,
+			"units": ["px", "rem", "em", "%", "vh", "vw"],
+			"spacingSizes": [
+				{ "slug": "xxxs", "name": "2", "size": "2px" },
+				{ "slug": "xxs", "name": "4", "size": "4px" },
+				{ "slug": "xs", "name": "8", "size": "8px" },
+				{ "slug": "sm", "name": "12", "size": "12px" },
+				{ "slug": "md", "name": "16", "size": "16px" },
+				{ "slug": "lg", "name": "20", "size": "20px" },
+				{ "slug": "xl", "name": "24", "size": "24px" },
+				{ "slug": "xxl", "name": "36", "size": "36px" }
+			]
+		},
+		"shadow": {
+			"defaultPresets": false,
+			"presets": [
+				{ "slug": "card", "name": "Card", "shadow": "0 3px 12px rgba(0,0,0,0.05), 0 0 2px rgba(0,0,0,0.10)" },
+				{ "slug": "elevated", "name": "Elevated", "shadow": "0 12px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06)" },
+				{ "slug": "button-hover", "name": "Button Hover", "shadow": "0 4px 12px rgba(37,99,235,0.30)" },
+				{ "slug": "focus-ring", "name": "Focus Ring", "shadow": "0 0 0 3px rgba(37,99,235,0.25)" }
+			]
+		},
+		"layout": {
+			"contentSize": "768px",
+			"wideSize": "1330px"
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var:preset|color|background",
+			"text": "var:preset|color|text-primary"
+		},
+		"typography": {
+			"fontFamily": "var:preset|font-family|sans",
+			"fontSize": "var:preset|font-size|base",
+			"fontWeight": "400",
+			"lineHeight": "1.5"
+		},
+		"spacing": {
+			"blockGap": "var:preset|spacing|md",
+			"padding": {
+				"top": "0",
+				"bottom": "0",
+				"left": "var:preset|spacing|md",
+				"right": "var:preset|spacing|md"
+			}
+		},
+		"elements": {
+			"link": {
+				"color": { "text": "var:preset|color|primary" },
+				":hover": {
+					"color": { "text": "var:preset|color|primary-hover" }
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontWeight": "600",
+					"lineHeight": "1.25"
+				}
+			},
+			"button": {
+				"color": {
+					"background": "var:preset|color|primary",
+					"text": "var:preset|color|text-on-primary"
+				},
+				"typography": {
+					"fontSize": "var:preset|font-size|base",
+					"fontWeight": "600"
+				},
+				"border": {
+					"radius": "var(--radius-md)"
+				},
+				"spacing": {
+					"padding": {
+						"top": "12px",
+						"bottom": "12px",
+						"left": "24px",
+						"right": "24px"
+					}
+				},
+				":hover": {
+					"color": {
+						"background": "var:preset|color|primary-hover",
+						"text": "var:preset|color|text-on-primary"
+					},
+					"shadow": "var:preset|shadow|button-hover"
+				},
+				":focus": {
+					"color": {
+						"background": "var:preset|color|primary-hover",
+						"text": "var:preset|color|text-on-primary"
+					}
+				},
+				":active": {
+					"color": {
+						"background": "var:preset|color|primary-hover",
+						"text": "var:preset|color|text-on-primary"
+					}
+				}
+			}
+		}
+	}
+}

@@ -9,11 +9,11 @@ License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 Tags:              full-site-editing, block-patterns, rtl-language-support, accessibility-ready
 
-Custom WordPress 7.0 Full-Site-Editing block theme for SwissBlue Hotels Group.
+Custom WordPress 7.0 Full-Site-Editing block theme for SwissBlue Hospitality Group.
 
 == Description ==
 
-SwissBlue FSE is a bespoke FSE block theme for SwissBlue Hotels Group, a
+SwissBlue FSE is a bespoke FSE block theme for SwissBlue Hospitality Group, a
 multi-property luxury hospitality brand in Saudi Arabia. It implements the
 "Brand New Yanolja Cloud Solution Design System" (BNY-CSDS) documented in
 DESIGN_SYSTEM.md, which is the single source of truth for every design token.

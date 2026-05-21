@@ -1,7 +1,7 @@
 # SwissBlue FSE
 
 Custom **WordPress 7.0 Full-Site-Editing (FSE) block theme** for **SwissBlue
-Hotels Group** — a multi-property luxury hospitality brand in Saudi Arabia.
+Hospitality Group** — a multi-property luxury hospitality brand in Saudi Arabia.
 
 The theme implements the **Brand New Yanolja Cloud Solution Design System
 (BNY-CSDS)**. That document — [`DESIGN_SYSTEM.md`](./DESIGN_SYSTEM.md) — is the
